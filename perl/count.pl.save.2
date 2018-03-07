@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+$file='file.txt';
+
+open(FILE, "<", $file) or die "can't open $file: $!";
+my ($lines, $words, $chars) = (0,0,0);
+
+while (<FILE>) 
+    $lines++;
+    $chars += length($_);
+    $words += scalar(splitl(/\s+/, $_));
+}
+
+print "No of lines are : $";

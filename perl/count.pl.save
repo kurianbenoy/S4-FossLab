@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+$file='file.txt';
+open(FILE, "<", $file) or die "can't open $file: $!";
+$count++ while <FILE>;
+
+print cou
